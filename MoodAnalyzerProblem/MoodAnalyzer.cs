@@ -25,6 +25,7 @@ namespace MoodAnalyzerProblem
             else
             {
                 return null;
+
             }
         }
     }
