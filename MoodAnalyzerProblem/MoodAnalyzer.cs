@@ -10,15 +10,6 @@ namespace MoodAnalyzerProblem
     {
         public const string Happy_Mood = "I am in Happy Mood";
         public const string Sad_Mood = "I am in Sad Mood";
-        //public MoodAnalyzer()
-        //{
-
-        //}
-        //public MoodAnalyzer(string mood)
-        //{
-
-        //}
-
         public string AnalyzeMood(string mood)
         {
             if (mood.ToLower().Contains("happy"))
