@@ -43,7 +43,7 @@ namespace MoodAnalyzerProblem
             }
             catch (System.NullReferenceException ex)
             {
-                Console.WriteLine(NULL);
+                Console.WriteLine(Happy_Mood);
                 return null;
             }
             catch (Exception ex)

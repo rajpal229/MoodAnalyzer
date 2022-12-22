@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Checking for Happy");
+            Console.WriteLine("Handle Exception");
             MoodAnalyzer moodAnalyzer1 = new MoodAnalyzer();
             moodAnalyzer1.AnalyzeMood();
         }
