@@ -10,7 +10,7 @@ namespace MoodAnalyzerProblem
     {
         const string Happy_Mood = "I am in Happy Mood";
         const string Sad_Mood = "I am in Sad Mood";
-        const string NULL = "Mood is null";
+        const string NULL = "Mood can't be Null";
         public string mood;
         public MoodAnalyzer() 
         {
@@ -19,24 +19,37 @@ namespace MoodAnalyzerProblem
         public MoodAnalyzer(string mood)
         {
             this.mood = mood;
-            this.mood = mood;
         }
         
         public string AnalyzeMood()
         {
-            if (mood.ToLower().Contains("happy"))
+            try
             {
-                Console.WriteLine(Happy_Mood);
-                return mood.ToLower();
+                if (this.mood.ToLower().Contains("happy"))
+                {
+                    Console.WriteLine(Happy_Mood);
+                    return mood.ToLower();
+                }
+                else if (this.mood.ToLower().Contains("sad"))
+                {
+                    Console.WriteLine(Sad_Mood);
+                    return mood.ToLower();
+                }
+                else
+                {
+                    throw new Exception("Exception: Invalid Input");
+                    return null;
+                }
             }
-            if (mood.ToLower().Contains("sad"))
+            catch (System.NullReferenceException ex)
             {
-                Console.WriteLine(Sad_Mood);
-                return mood.ToLower();
+                Console.WriteLine(NULL);
+                return null;
             }
-            else
+            catch (Exception ex)
             {
-                return NULL;
+                Console.WriteLine(ex.Message);
+                return null;
             }
         }
     }
